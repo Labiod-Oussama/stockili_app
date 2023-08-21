@@ -42,10 +42,10 @@ function About() {
                 </Box>
                 <Box data-aos="fade-left" flex={1} p={isMatchedPhone ? '0 5px' : '0 50px'} display='flex' flexDirection='column' justifyContent='center' mb={isMatchedPhone && 5} >
                     <Typography variant={isMatchedPhone ? 'h5' : 'h4'} sx={{ fontWeight: 'bolder', mb: isMatchedPhone ? 2 : 5 }} color='secondary.main' gutterBottom>
-                        How about startups ?
+                        How about startups ? 
                     </Typography>
                     <Typography variant='body1' color='secondary.main'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quaerat doloremque quae dignissimos ab eius laboriosam, odit impedit tenetur expedita labore? Eaque ab accusantium modi.
+                        Lorem ipsum dolor sit amet connsectetur adipisicing elit. Distinctio quaerat doloremque quae dignissimos ab eius laboriosam, odit impedit tenetur expedita labore? Eaque ab accusantium modi.
                     </Typography>
                 </Box>
             </Box>
