@@ -29,7 +29,7 @@ import styled from '@emotion/styled';
                         <Box display='flex' justifyContent='center'>
                             <PlaceIcon sx={{ color: 'primary.A100', mr: 1 }} />
                             <Typography variant='body1' color='whitesmoke'>
-                                Ouregla
+                                Alger
                             </Typography>
                         </Box>
                     </Grid>

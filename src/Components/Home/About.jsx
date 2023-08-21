@@ -13,10 +13,30 @@ function About() {
     const isMatchedPhone = useMediaQuery(theme.breakpoints.down('sm'))
     return (
         <Box pt={2}>
-            <Typography variant={isMatchedPhone?'h4':'h3'} color='primary.main' sx={{ textAlign: 'center',fontFamily:'Yusei Magic', mb: 5}}>
-                About Us
-            </Typography>
-            <Box display='flex' p={isMatchedPhone?'0 15px':'0 50px'} flexDirection={isMatchedPhone ? 'column-reverse' : 'row'} mb={8} mt={3}>
+            <Box sx={{ display: 'flex', justifyContent: "center" }}>
+                <Typography
+                    data-aos='zoom-in'
+                    variant={isMatchedPhone ? 'h5' : 'h3'}
+                    color="primary.main"
+                    sx={{
+                        position: 'relative',
+                        fontWeight: 'bold',
+                        border: '2.3px dotted #102C57',
+                        padding: '7px',
+                        borderRadius: '15px',
+                        mb: 4,
+                        '&::before': {
+                            bgcolor: '#C70039', position: 'absolute', content: '" "', height: '12px', width: '12px', borderRadius: '50%', bottom: '40%', left: '-25px',
+                        },
+                        '&::after': {
+                            bgcolor: '#C70039', position: 'absolute', content: '" "', height: '12px', width: '12px', borderRadius: '50%', bottom: '40%', right: '-25px',
+                        }
+                    }}
+                >
+                    <i>About Us</i>
+                </Typography>
+            </Box>
+            <Box display='flex' p={isMatchedPhone ? '0 15px' : '0 50px'} flexDirection={isMatchedPhone ? 'column-reverse' : 'row'} mb={8} mt={3}>
                 <Box data-aos="fade-right" flex={1} textAlign='center'>
                     <img src={about} alt="cv" width='80%' />
                 </Box>

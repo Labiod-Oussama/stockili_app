@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineItem, { timelineItemClasses } from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
@@ -17,22 +17,47 @@ function Services() {
     const isMatchedTablette = useMediaQuery(theme.breakpoints.down('md'))
     const isMatchedPhone = useMediaQuery(theme.breakpoints.down('sm'))
     return (
-        <Box sx={{mb:10}}>
-            <Typography variant={isMatchedPhone?'h4':'h3'} color='primary.main'sx={{textAlign:'center',mb:5,fontFamily:'Yusei Magic'}}>
-                Services
-            </Typography>
-            <Timeline position="alternate">
+        <Box sx={{ mb: { xs: 3, md: 10 } }}>
+            <Box sx={{ display: 'flex', justifyContent: "center" }}>
+                <Typography
+                    data-aos='zoom-in'
+                    variant={isMatchedPhone ? 'h5' : 'h3'}
+                    color="primary.main"
+                    sx={{
+                        position: 'relative',
+                        fontWeight: 'bold',
+                        border: '2.3px dotted #102C57',
+                        padding: '7px',
+                        borderRadius: '15px',
+                        mb: 4,
+                        '&::before': {
+                            bgcolor: '#C70039', position: 'absolute', content: '" "', height: '12px', width: '12px', borderRadius: '50%', bottom: '40%', left: '-25px',
+                        },
+                        '&::after': {
+                            bgcolor: '#C70039', position: 'absolute', content: '" "', height: '12px', width: '12px', borderRadius: '50%', bottom: '40%', right: '-25px',
+                        }
+                    }}
+                >
+                    <i>Services</i>
+                </Typography>
+            </Box>
+            <Timeline position={isMatchedPhone ? 'right' : 'alternate'} sx={isMatchedPhone && {
+                [`& .${timelineItemClasses.root}:before`]: {
+                    flex: 0,
+                    padding: 0,
+                },
+            }}>
                 {
                     Services.map((Service, index) => (
-                        <TimelineItem key={index}>
+                        <TimelineItem key={index} >
                             <TimelineSeparator>
-                                <TimelineDot sx={{ bgcolor: 'primary.light',transform:'scale(1.5)' }} />
+                                <TimelineDot sx={{ bgcolor: 'primary.light', transform: { xs: 'scale(1)', md: 'scale(1.5)' } }} />
                                 {
                                     (index != Services.length - 1) && <TimelineConnector />
                                 }
                             </TimelineSeparator>
 
-                            <TimelineContent sx={{":first-letter":{color:'primary.main',fontWeight:'bolder'},lineHeight:{xs:'25px',md:'30px'}}}>{Service}</TimelineContent>
+                            <TimelineContent sx={{ ":first-letter": { color: 'primary.main', fontWeight: 'bolder' }, lineHeight: { xs: '25px', md: '30px' } }}>{Service}</TimelineContent>
                         </TimelineItem>
                     ))
                 }

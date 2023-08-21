@@ -5,7 +5,6 @@ import LoginIcon from '@mui/icons-material/Login';
 import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
 import { useNavigate } from 'react-router-dom';
 import Drawer from './Draw';
-
 function Header() {
     const navigate = useNavigate()
     const pages = ['Services', 'About', 'Contact Us'];
