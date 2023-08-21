@@ -1,5 +1,5 @@
 import { Box, Button, Paper, Typography, useMediaQuery, useTheme } from '@mui/material'
-import wave from '../../assets/wave.svg'
+import wave from '../assets/wave.svg'
 import React from 'react'
 import Grid from '@mui/material/Unstable_Grid2';
 import styled from '@emotion/styled';

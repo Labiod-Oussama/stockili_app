@@ -1,7 +1,7 @@
 import { Box, Button, Container, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React, { useRef } from 'react'
 import Header from '../Gloabal/Header'
-import HeadImage from '../../assets/HeadImage.png'
+import HeadImage from '../assets/HeadImage.png'
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import Services from './Services';
 import About from './About';

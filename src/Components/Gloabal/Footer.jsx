@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2'; 
-import blob from '../../assets/blob.svg';
+import blob from '../assets/blob.svg';
 import PlaceIcon from '@mui/icons-material/Place';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';

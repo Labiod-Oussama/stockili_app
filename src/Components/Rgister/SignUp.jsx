@@ -3,7 +3,7 @@ import { ErrorMessage, Form, Formik } from 'formik'
 import * as Yup from 'yup'
 import React, { useState } from 'react'
 import Header from '../Gloabal/Header'
-import signup from '../../assets/signup.svg'
+import signup from '../assets/signup.svg'
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
 function SignUp() {

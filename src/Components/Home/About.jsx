@@ -1,5 +1,5 @@
 import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
-import about from '../../Assets/about.svg'
+import about from '../assets/about.svg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import React, { useEffect } from 'react'
